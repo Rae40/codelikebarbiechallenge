@@ -16,23 +16,48 @@
     }
 
     header{
-      background-color: #ECD5D9; 
+       background-image: linear-gradient(rgba(236, 213, 217, 0.7), rgba(236, 213, 217,0.9)), url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/685/original/Barbie.jpeg?1693782194");
+       background-repeat:no-repeat;
+      background-size: cover;
       text-align:center;
-      font-family:"Jacques Francois Shadow";
+      font-family:"Montserrat Alternates";
+      font-style: italic;
+      padding: 20px;
     }
+
+     header h1{
+        font-size: 50px;
+      }
+
+        header h2{
+        font-size: 35px;
+      }
+
+        header h3{
+        font-size: 20px;
+      }
+
+    #barbie{
+  color:  #E81A9B;
+  font-style: italic;
+  font-family:"Jacques Francois Shadow";
+  font-size: 55px;
+    }
+
+   #ken {
+  color:  #55b6ff;
+  font-style: italic;
+  font-family:"Righteous";
+  font-size: 34px;
+    }
+
+    
 
     section {
       max-width:1500px;
       margin:0 auto;
       padding:100px 0;
     }
-
-    
-    .container1{
-      background-color: #ECD5D9;
-    }
-
-  
 
     .container2{
   background-image: linear-gradient(rgba(236, 213, 217, 0.8), rgba(236, 213, 217,0.6)), url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/678/original/Airbnb_Is_Offering_a_Free_Stay_at_Barbie%E2%80%99s_Malibu_Dreamhouse__Hosted_by_Ken.jpeg?1693781863");
@@ -95,11 +120,41 @@
        background-color: #ECD5D9;
        margin: 20px 0;
        padding: 10px;
+      
+    }
+
+    .card p{
+      padding: 10px;
     }
 
 
     .card-footer {
       padding:20px;
+    }
+
+    #blu{
+      color: #55b6ff;
+    }
+
+    .btn{
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffff;
+
+      text-decoration: none;
+      padding: 16px;
+      gap: 10px;
+       background:  linear-gradient( #E81A9B,#ebc4ca);
+    }
+
+    .btn:hover{
+     background:  linear-gradient( #E81A9B, #55b6ff);
+      color:  #ffff;
     }
 
     .img-responsive { 
@@ -146,47 +201,107 @@
       opacity: 30%;
     }
 
+    @media(max-width: 960px){
+      header {
+        padding: 60px 0;
+
+      }
+
+      header h1{
+        font-size: 38px;
+      }
+
+        header h2{
+        font-size: 25px;
+      }
+
+        header h3{
+        font-size: 20px;
+      }
+
+
+      iframe{
+        width: 100%;
+        aspect-ratio:9/9;
+
+      }
+
+      .grid-3-columns{
+        grid-template-columns: 1fr;
+      }
+  
+
+       .container2{
+    background-color: #ECD5D9;
+    background-image: none;
+
+    padding: 25px;
+    border-radius:10px;
+    }
+
+  #trailer{
+      display: grid;
+      grid-template-columns: 1fr;
+    
+  
+    }
+
+    .container2 p{
+      font-size: 20px;
+      font-style: normal;
+      
+    }
+
+    .grid-4-columns{
+        grid-template-columns: 1fr 1fr;
+      }
+
+    
+
+      footer{
+        grid-template-columns: 2fr;
+      }
+
+      footer p{
+      font-size: 15px;
+      }
+    }
+
+
+
   </style>
 </head>
 <body>
   <header>
 
+     <h1>
+To live in <span id="barbie">Barbie</span> 
+<div>Land is to be a perfect being</div> 
+<div> in a perfect place.</div>
+    </h1>
+
     <div class="trailer">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pBk4NYhWNMM?si=-HP7LKu-Zw6ZBZH-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 </div>
 
+ <h2>
+Unless you have a full-on existential crisis.
+    </h2>
 
+    <h3>
+Or you’re a <span id="ken">Ken</span>.
+    </h3>
 
 
   </header>
 
   <main>
-    <section>
-      <div class="container1">
-    <h1>
-To live in Barbie Land is to be a perfect being in a perfect place.  
-    </h1>
-    <h2>
-Unless you have a full-on existential crisis.
-    </h2>
-    <h3>
-Or you’re a Ken.
-    </h3>
-</div>
-
-<p>
-
-</p>
-
-
- 
-    </section>
 
     <section>
 
       <div class="container2">
 <h1>
-  Welcome to  Barbie Land!
+  Welcome to <span id="barbie">Barbie</span> Land!
 </h1>
 <div id="trailer">
  <div id="trailer">
@@ -279,15 +394,20 @@ Or you’re a Ken.
         </div>
 
         <div class="card-body">
-          <h4>Hi Barbies!....& Kens...</h4>
-          <p>
-
-          </p>
+          <h3>Barbies & Kens!</h3>
+          <ul>
+           <li><span id="blu">Margot Robbie</span> as Barbie</li>
+           <li><span id="blu">Issa Rae</span> as Barbie</li>
+           <li>Ryan Gosling as <span id="blu">Ken</span></li>
+            <li>Simu Liu as<span id="blu"> Ken</span></li>
+           <li><span id="blu">America Ferrera</span> as Gloria</li>
+          <li><span id="blu">Ariana Greenblatt</span> as Sasha</li>
+        </ul>
 
         </div>
 
         <div class="card-footer">
-          <a href="https://www.imdb.com/title/tt1517268/fullcredits/?ref_=tt_cl_sm" target="_blank">Barbie Movie Cast</a>
+          <a href="https://www.imdb.com/title/tt1517268/fullcredits/?ref_=tt_cl_sm" class="btn" target="_blank">Barbie Movie Cast</a>
         </div>
       </div>
 
@@ -299,12 +419,22 @@ Or you’re a Ken.
         </div>
 
         <div class="card-body">
-          <h4></h4>
-          <p></p>
+          <h3>Barbie Official Playlist</h3>
+          <ul>
+           <li>Barbie World</li>
+           <li><span id="blu">Dance The Night</span></li>
+           <li>What Was I Made For?</li>
+            <li><span id="blu">Speed Drive</span></li>
+           <li>I'm Just Ken</li>
+          <li><span id="blu">Choose Your Fighter</span></li>
+        </ul>
 
         </div>
 
         <div class="card-footer">
+
+          <a href="https://open.spotify.com/playlist/37i9dQZF1DX0wIBbVnPvie?si=a14bd23b5e6f4d16" class="btn" target="_blank">Listen Here</a>
+         
 
         </div>
       </div>
@@ -317,12 +447,19 @@ Or you’re a Ken.
         </div>
 
         <div class="card-body">
-          <h4></h4>
-          <p></p>
+          <h3>Director Greta Gerwig</h3>
+          <p>
+           <span id="blu">Greta Gerwig</span>  is an American actress, playwright, screenwriter, and director. 
+           <br />
+          <br />
+           She has collaborated with Noah Baumbach on several films, including Greenberg (2010), Frances Ha (2012), for which she earned a Golden Globe nomination, and Mistress America (2015).   <span id="blu">Gerwig...</span>
+          </p>
 
         </div>
 
         <div class="card-footer">
+
+          <a href="https://www.imdb.com/name/nm1950086/" class="btn" target="_blank">Read More Here</a>
 
         </div>
       </div>
@@ -335,12 +472,20 @@ Or you’re a Ken.
         </div>
 
         <div class="card-body">
-          <h4></h4>
-          <p></p>
+          <h3>Barbie Movie Reviews</h3>
+          <ul>
+            <li>An Unforgettable Delight!</li>
+            <br />
+            <li><span id="blu">"Barbie Movie" - A Whimsical and Empowering Adventure for All Ages</span></li>
+            <br />
+            <li>A Mesmerizing and Modern Masterpiece: The 2023 Barbie Movie Soars with Margot Robbie and Ryan Gosling!</li>
+          </ul>  
 
         </div>
 
         <div class="card-footer">
+
+          <a href="https://www.google.com/search?q=barbie+movie+reviews&oq=barbie+movie+rev&aqs=chrome.0.0i433i512j69i57j0i433i512j0i512l7&sourceid=chrome&ie=UTF-8" class="btn" target="_blank">Read More Here</a>
 
         </div>
       </div>
@@ -355,18 +500,15 @@ Or you’re a Ken.
   <h4>More On the Film</h4>
   <li><a href="https://www.barbie-themovie.com/" target="_blank">Barbie-Official Movie Site</a></li>
   <li><a href="https://open.spotify.com/album/0BaIaHcyBXuOWeM4Aas4EW?si=bEgLyR0IQjOoSmug9lnCFw" target="_blank">Barbie The Album</a></li>
- <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX0wIBbVnPvie?si=a14bd23b5e6f4d16" target="_blank">Barbie Official Playlist</a></li>
  <li><a href="https://www.barbieselfie.ai/" target="_blank">Barbie Selfie AI</a></li>
 </ul>
 
 <ul>
-  <h4><a href="https://www.imdb.com/title/tt1517268/fullcredits/?ref_=tt_cl_sm" target="_blank">Barbie Movie Cast</a></h4>
-  <li>Margot Robbie</li>
-  <li>Issa Rae</li>
-  <li>Ryan Gosling</li>
-  <li>Simu Liu</li>
-  <li>America Ferrera</li>
-  <li>Ariana Greenblatt</li>
+  <h4>Social Media</h4>
+  <li><a href="https://www.instagram.com/barbiethemovie/" target="_blank">Instagram</a></li>
+  <li><a href="https://twitter.com/barbiethemovie?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Twitter</a></li>
+  <li><a href="https://www.facebook.com/BarbieTheMovie/" target="_blank">Facebook</a></li>
+  <li><a href="https://www.snapchat.com/add/barbiethemovie?locale=en-US" target="_blank">Snapchat</a></li>
   <br />
   <div class="designed">Designed and coded by <a href="https://github.com/Rae40" target="_blank">Renee Christian</a></div>
  
